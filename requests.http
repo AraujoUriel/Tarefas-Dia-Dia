@@ -1,0 +1,30 @@
+### Listar
+GET http://localhost:8080/api/tarefas
+
+### Criar
+POST http://localhost:8080/api/tarefas
+Content-Type: application/json
+
+{
+  "nome": "Estudar Spring Boot",
+  "descricao": "Implementar o projeto de tarefas",
+  "status": "PENDENTE",
+  "observacoes": "Entregar no GitHub"
+}
+
+### Buscar (substitua 1 pelo id retornado na criacao)
+GET http://localhost:8080/api/tarefas/1
+
+### Atualizar
+PUT http://localhost:8080/api/tarefas/1
+Content-Type: application/json
+
+{
+  "nome": "Estudar Spring Boot",
+  "descricao": "Projeto finalizado",
+  "status": "CONCLUIDA",
+  "observacoes": "Testes executados"
+}
+
+### Excluir
+DELETE http://localhost:8080/api/tarefas/1
